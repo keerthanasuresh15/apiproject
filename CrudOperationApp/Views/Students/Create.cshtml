@@ -1,0 +1,46 @@
+﻿@model CrudOperationApp.Models.Student
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Student</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    
+    <div>
+        <div >
+            @Html.LabelFor(model => model.Name)
+            <div>
+                @Html.EditorFor(model => model.Name)
+            </div>
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.Address)
+            <div>
+                @Html.EditorFor(model => model.Address)
+            </div>
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.Mobile)
+            <div>
+                @Html.EditorFor(model => model.Mobile)
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <input type="submit" value="Create" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

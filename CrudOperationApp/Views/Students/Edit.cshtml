@@ -1,0 +1,50 @@
+﻿@model CrudOperationApp.Models.Student
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    
+    <div class="form-horizontal">
+        <h4>Student</h4>
+        <hr />
+        @Html.HiddenFor(model => model.StudentID)
+
+        <div>
+            @Html.LabelFor(model => model.Name)
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name)
+            </div>
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.Address)
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Address)
+            </div>
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.Mobile)
+            <div>
+                @Html.EditorFor(model => model.Mobile)
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <input type="submit" value="Save" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
